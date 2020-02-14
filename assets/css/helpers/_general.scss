@@ -1,0 +1,9 @@
+.h {
+  &-container {
+    max-width: $container-width;
+  }
+
+  &-vertical-center{
+    @include vertical-center();
+  }
+}

@@ -1,0 +1,665 @@
+  /*
+    自訂常用 class 檔案
+  */
+
+  //文字位置
+  .align-center {
+    text-align: center;
+  }
+
+  .align-left {
+    text-align: left;
+  }
+
+  .align-right {
+    text-align: right;
+  }
+
+  // 文字超出範圍隱藏
+  .text-ellipse {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  // 位置
+  .relative {
+    position: relative;
+  }
+
+  .select-none {
+    user-select: none;
+  }
+
+  // display
+  .d-block {
+    display: block !important;
+  }
+
+  .d-flex {
+    display: flex !important;
+  }
+
+  .d-none {
+    display: none !important;
+  }
+
+  // float
+  .clearfix {
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  .float-left {
+    float: left;
+  }
+
+  .float-right {
+    float: right;
+  }
+
+  // flex
+  .flex-row {
+    flex-direction: row !important;
+  }
+
+  .flex-column {
+    flex-direction: column !important;
+  }
+
+  .flex-row-reverse {
+    flex-direction: row-reverse !important;
+  }
+
+  .flex-column-reverse {
+    flex-direction: column-reverse !important;
+  }
+
+  .flex-wrap {
+    flex-wrap: wrap !important;
+  }
+
+  .flex-nowrap {
+    flex-wrap: nowrap !important;
+  }
+
+  .flex-wrap-reverse {
+    flex-wrap: wrap-reverse !important;
+  }
+
+  .flex-1 {
+    flex: 1;
+  }
+
+  .flex-fill {
+    flex: 1 1 auto !important;
+  }
+
+  .flex-grow-0 {
+    flex-grow: 0 !important;
+  }
+
+  .flex-grow-1 {
+    flex-grow: 1 !important;
+  }
+
+  .flex-shrink-0 {
+    flex-shrink: 0 !important;
+  }
+
+  .flex-shrink-1 {
+    flex-shrink: 1 !important;
+  }
+
+  .justify-content-start {
+    justify-content: flex-start !important;
+  }
+
+  .justify-content-end {
+    justify-content: flex-end !important;
+  }
+
+  .justify-content-center {
+    justify-content: center !important;
+  }
+
+  .justify-content-between {
+    justify-content: space-between !important;
+  }
+
+  .justify-content-around {
+    justify-content: space-around !important;
+  }
+
+  .align-items-start {
+    align-items: flex-start !important;
+  }
+
+  .align-items-end {
+    align-items: flex-end !important;
+  }
+
+  .align-items-center {
+    align-items: center !important;
+  }
+
+  .align-items-baseline {
+    align-items: baseline !important;
+  }
+
+  .align-items-stretch {
+    align-items: stretch !important;
+  }
+
+  .align-content-start {
+    align-content: flex-start !important;
+  }
+
+  .align-content-end {
+    align-content: flex-end !important;
+  }
+
+  .align-content-center {
+    align-content: center !important;
+  }
+
+  .align-content-between {
+    align-content: space-between !important;
+  }
+
+  .align-content-around {
+    align-content: space-around !important;
+  }
+
+  .align-content-stretch {
+    align-content: stretch !important;
+  }
+
+  .align-self-auto {
+    align-self: auto !important;
+  }
+
+  .align-self-start {
+    align-self: flex-start !important;
+  }
+
+  .align-self-end {
+    align-self: flex-end !important;
+  }
+
+  .align-self-center {
+    align-self: center !important;
+  }
+
+  .align-self-baseline {
+    align-self: baseline !important;
+  }
+
+  .align-self-stretch {
+    align-self: stretch !important;
+  }
+
+  // 此處為 variables 轉換成 class
+  @each $key, $value in $colors {
+    .tx-#{$key} {
+      color: $value !important;
+    }
+
+    .bg-#{$key} {
+      background: $value !important;
+    }
+
+    .border-#{$key} {
+      border-color: $value !important;
+    }
+  }
+
+  @each $key, $value in $font-size {
+    .font-#{$key} {
+      font-size: $value !important;
+    }
+  }
+
+  @each $key, $value in $font-family {
+    .font-#{$key} {
+      font-family: $value !important;
+    }
+  }
+
+  @each $key, $value in $weights {
+    .weight-#{$key} {
+      font-weight: $value !important;
+    }
+  }
+
+  @each $key, $value in $spaces {
+    .m-#{$key} {
+      margin: $value !important;
+    }
+
+    .mt-#{$key},
+    .my-#{$key} {
+      margin-top: $value !important;
+    }
+
+    .mr-#{$key},
+    .mx-#{$key} {
+      margin-right: $value !important;
+    }
+
+    .mb-#{$key},
+    .my-#{$key} {
+      margin-bottom: $value !important;
+    }
+
+    .ml-#{$key},
+    .mx-#{$key} {
+      margin-left: $value !important;
+    }
+
+    .p-#{$key} {
+      padding: $value !important;
+    }
+
+    .pt-#{$key},
+    .py-#{$key} {
+      padding-top: $value !important;
+    }
+
+    .pr-#{$key},
+    .px-#{$key} {
+      padding-right: $value !important;
+    }
+
+    .pb-#{$key},
+    .py-#{$key} {
+      padding-bottom: $value !important;
+    }
+
+    .pl-#{$key},
+    .px-#{$key} {
+      padding-left: $value !important;
+    }
+  }
+
+  .ml-auto {
+    margin-left: auto !important;
+  }
+
+  .mr-auto {
+    margin-right: auto !important;
+  }
+
+  .mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  @each $key, $value in $widths {
+    .width-#{$key} {
+      width: $value !important;
+    }
+  }
+
+  @each $key, $value in $rounds {
+    .round-#{$key} {
+      border-radius: $value !important;
+    }
+  }
+
+  @each $key, $value in $border-styles {
+    .border-#{$key} {
+      border-style: $value !important;
+    }
+  }
+
+  @each $key, $value in $border-width {
+    .border-#{$key} {
+      border-width: $value !important;
+    }
+  }
+
+  @each $key, $value in $cursors {
+    .cursor-#{$key} {
+      cursor: $value !important;
+    }
+  }
+
+  @each $key, $value in $opacitys {
+    .opacity-#{$key} {
+      opacity: $value !important;
+    }
+  }
+
+  // 此處為上方 class 加上 RWD
+  @each $device, $screen in $RWD {
+    @include breakpoint($device){
+      .#{$device}-align-center {
+        text-align: center;
+      }
+
+      .#{$device}-align-left {
+        text-align: left;
+      }
+
+      .#{$device}-align-right {
+        text-align: right;
+      }
+
+      .#{$device}-text-ellipse {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .#{$device}-relative {
+        position: relative;
+      }
+
+      .#{$device}-select-none {
+        user-select: none;
+      }
+
+      .#{$device}-d-block {
+        display: block !important;
+      }
+
+      .#{$device}-d-flex {
+        display: flex !important;
+      }
+
+      .#{$device}-d-none {
+        display: none !important;
+      }
+
+      .#{$device}-clearfix {
+        &::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
+
+      .#{$device}-float-left {
+        float: left;
+      }
+
+      .#{$device}-float-right {
+        float: right;
+      }
+
+      .#{$device}-flex-row {
+        flex-direction: row !important;
+      }
+
+      .#{$device}-flex-column {
+        flex-direction: column !important;
+      }
+
+      .#{$device}-flex-row-reverse {
+        flex-direction: row-reverse !important;
+      }
+
+      .#{$device}-flex-column-reverse {
+        flex-direction: column-reverse !important;
+      }
+
+      .#{$device}-flex-wrap {
+        flex-wrap: wrap !important;
+      }
+
+      .#{$device}-flex-nowrap {
+        flex-wrap: nowrap !important;
+      }
+
+      .#{$device}-flex-wrap-reverse {
+        flex-wrap: wrap-reverse !important;
+      }
+
+      .#{$device}-flex-1 {
+        flex: 1;
+      }
+
+      .#{$device}-flex-fill {
+        flex: 1 1 auto !important;
+      }
+
+      .#{$device}-flex-grow-0 {
+        flex-grow: 0 !important;
+      }
+
+      .#{$device}-flex-grow-1 {
+        flex-grow: 1 !important;
+      }
+
+      .#{$device}-flex-shrink-0 {
+        flex-shrink: 0 !important;
+      }
+
+      .#{$device}-flex-shrink-1 {
+        flex-shrink: 1 !important;
+      }
+
+      .#{$device}-justify-content-start {
+        justify-content: flex-start !important;
+      }
+
+      .#{$device}-justify-content-end {
+        justify-content: flex-end !important;
+      }
+
+      .#{$device}-justify-content-center {
+        justify-content: center !important;
+      }
+
+      .#{$device}-justify-content-between {
+        justify-content: space-between !important;
+      }
+
+      .#{$device}-justify-content-around {
+        justify-content: space-around !important;
+      }
+
+      .#{$device}-align-items-start {
+        align-items: flex-start !important;
+      }
+
+      .#{$device}-align-items-end {
+        align-items: flex-end !important;
+      }
+
+      .#{$device}-align-items-center {
+        align-items: center !important;
+      }
+
+      .#{$device}-align-items-baseline {
+        align-items: baseline !important;
+      }
+
+      .#{$device}-align-items-stretch {
+        align-items: stretch !important;
+      }
+
+      .#{$device}-align-content-start {
+        align-content: flex-start !important;
+      }
+
+      .#{$device}-align-content-end {
+        align-content: flex-end !important;
+      }
+
+      .#{$device}-align-content-center {
+        align-content: center !important;
+      }
+
+      .#{$device}-align-content-between {
+        align-content: space-between !important;
+      }
+
+      .#{$device}-align-content-around {
+        align-content: space-around !important;
+      }
+
+      .#{$device}-align-content-stretch {
+        align-content: stretch !important;
+      }
+
+      .#{$device}-align-self-auto {
+        align-self: auto !important;
+      }
+
+      .#{$device}-align-self-start {
+        align-self: flex-start !important;
+      }
+
+      .#{$device}-align-self-end {
+        align-self: flex-end !important;
+      }
+
+      .#{$device}-align-self-center {
+        align-self: center !important;
+      }
+
+      .#{$device}-align-self-baseline {
+        align-self: baseline !important;
+      }
+
+      .#{$device}-align-self-stretch {
+        align-self: stretch !important;
+      }
+            
+      @each $key, $value in $colors {
+        .#{$device}-tx-#{$key} {
+          color: $value !important;
+        }
+
+        .#{$device}-bg-#{$key} {
+          background: $value !important;
+        }
+
+        .#{$device}-border-#{$key} {
+          border-color: $value !important;
+        }
+      }
+
+      @each $key, $value in $font-size {
+        .#{$device}-font-#{$key} {
+          font-size: $value !important;
+        }
+      }
+
+      @each $key, $value in $font-family {
+        .#{$device}-font-#{$key} {
+          font-family: $value !important;
+        }
+      }
+
+      @each $key, $value in $weights {
+        .#{$device}-weight-#{$key} {
+          font-weight: $value !important;
+        }
+      }
+
+      @each $key, $value in $spaces {
+        .#{$device}-m-#{$key} {
+          margin: $value !important;
+        }
+
+        .#{$device}-mt-#{$key},
+        .#{$device}-my-#{$key} {
+          margin-top: $value !important;
+        }
+
+        .#{$device}-mr-#{$key},
+        .#{$device}-mx-#{$key} {
+          margin-right: $value !important;
+        }
+
+        .#{$device}-mb-#{$key},
+        .#{$device}-my-#{$key} {
+          margin-bottom: $value !important;
+        }
+
+        .#{$device}-ml-#{$key},
+        .#{$device}-mx-#{$key} {
+          margin-left: $value !important;
+        }
+
+        .#{$device}-p-#{$key} {
+          padding: $value !important;
+        }
+
+        .#{$device}-pt-#{$key},
+        .#{$device}-py-#{$key} {
+          padding-top: $value !important;
+        }
+
+        .#{$device}-pr-#{$key},
+        .#{$device}-px-#{$key} {
+          padding-right: $value !important;
+        }
+
+        .#{$device}-pb-#{$key},
+        .#{$device}-py-#{$key} {
+          padding-bottom: $value !important;
+        }
+
+        .#{$device}-pl-#{$key},
+        .#{$device}-px-#{$key} {
+          padding-left: $value !important;
+        }
+      }
+
+      .#{$device}-ml-auto {
+        margin-left: auto !important;
+      }
+
+      .#{$device}-mr-auto {
+        margin-right: auto !important;
+      }
+
+      .#{$device}-mx-auto {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      @each $key, $value in $widths {
+        .#{$device}-width-#{$key} {
+          width: $value !important;
+        }
+      }
+
+      @each $key, $value in $rounds {
+        .#{$device}-round-#{$key} {
+          border-radius: $value !important;
+        }
+      }
+
+      @each $key, $value in $border-styles {
+        .#{$device}-border-#{$key} {
+          border-style: $value !important;
+        }
+      }
+
+      @each $key, $value in $border-width {
+        .#{$device}-border-#{$key} {
+          border-width: $value !important;
+        }
+      }
+
+      @each $key, $value in $cursors {
+        .#{$device}-cursor-#{$key} {
+          cursor: $value !important;
+        }
+      }
+
+      @each $key, $value in $opacitys {
+        .#{$device}-opacity-#{$key} {
+          opacity: $value !important;
+        }
+      }
+    }
+  }

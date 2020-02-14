@@ -1,0 +1,38 @@
+{
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": false, // 存檔時不進行 vscode 自動排版 (避免產生衝突)
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vetur.format.defaultFormatter.css": "none", // vetur format 全數關閉
+  "vetur.format.defaultFormatter.html": "none",
+  "vetur.format.defaultFormatter.js": "none",
+  "vetur.format.defaultFormatter.less": "none",
+  "vetur.format.defaultFormatter.postcss": "none",
+  "vetur.format.defaultFormatter.scss": "none",
+  "vetur.format.defaultFormatter.ts": "none",
+  "vetur.format.defaultFormatter.stylus": "none",
+  "vetur.format.enable": false,
+  "prettier.trailingComma": "all", // 開啟 eslint 支援
+  "eslint.autoFixOnSave": true, //  eslint 保存自動修復
+  "eslint.validate": [
+    "javascript", //  eslint 檢測 js 文件
+    {
+      "language": "vue", // 檢測 vue 文件
+      "autoFix": true // 自動修復 vue 文件
+    }
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
