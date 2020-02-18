@@ -46,11 +46,11 @@ module.exports = {
   css: ['@/assets/css/main.scss'],
 
   // Nuxt.js 擴展
-  modules: ['@nuxtjs/axios', 'nuxt-purgecss'],
+  modules: ['@nuxtjs/axios'],
 
   // 客製化配置 nuxt 應用路由
   router: {
-    // 配合 github deploy 用
+    // 配合 github deploy 用 /nuxt/ 記得改成專案資料夾名稱才能 deploy
     base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/nuxt/' : '',
 
     mode: 'history',
