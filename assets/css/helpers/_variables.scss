@@ -10,20 +10,20 @@ $RWD: (
 
 // 顏色, 使用 (rwd尺寸-)tx-key值 or (rwd尺寸-)bg-key值 or (rwd尺寸-)border-key值
 $colors: (
-  'white':#fff,
-  'black':#000,
-  'primary':#4A90E2,
-  'link':#00408B,
-  'info':#FFF2DC,
-  'success':#3db891,
-  'danger':#D0021B,
-  'warning':#F5A623,
-  'cancel':#c4c4c4,
-  'gray-100':#F2F2F2,
-  'gray-200':#E1E1E1,
-  'gray-300':#C8C8C8,
-  'gray-400':#757575
-  );
+  'white': #fff,
+  'black': #000,
+  'primary': #4a90e2,
+  'link': #00408b,
+  'info': #fff2dc,
+  'success': #3db891,
+  'danger': #d0021b,
+  'warning': #f5a623,
+  'cancel': #c4c4c4,
+  'gray-100': #f2f2f2,
+  'gray-200': #e1e1e1,
+  'gray-300': #c8c8c8,
+  'gray-400': #757575
+);
 
 // 字形大小, 使用 (rwd尺寸-)font-key值
 $font-size: (
@@ -37,8 +37,17 @@ $font-size: (
 
 // font-family, 使用 (rwd尺寸-)font-key值
 $font-family: (
-  'sans': ("Segoe UI","微軟正黑體",sans-serif),
-  'serif':(Georgia, "Times New Roman", Times, serif)
+  'sans': (
+    'Segoe UI',
+    '微軟正黑體',
+    sans-serif
+  ),
+  'serif': (
+    Georgia,
+    'Times New Roman',
+    Times,
+    serif
+  )
 );
 
 // 字形重量, 使用 (rwd尺寸-)weight-key值
@@ -50,6 +59,7 @@ $weights: (
 
 // 間距, 使用 (rwd尺寸-)m-方向-key值 or (rwd尺寸-)p-方向-key值
 $spaces: (
+  '0': 0,
   '1': 0.25rem,
   '2': 0.5rem,
   '3': 0.75rem,
@@ -61,21 +71,37 @@ $spaces: (
   '9': 2.25rem,
   '10': 2.5rem,
   '11': 2.75rem,
-  '12': 3rem,
+  '12': 3rem
 );
 
 // 寬度百分比, 使用 (rwd尺寸-)width-key值
 $widths: (
   '0': 0,
-  '25': 25%,
-  '50': 50%,
-  '75': 75%,
-  '100': 100%
+  '1': 5%,
+  '2': 10%,
+  '3': 15%,
+  '4': 20%,
+  '5': 25%,
+  '6': 30%,
+  '7': 35%,
+  '8': 40%,
+  '9': 45%,
+  '10': 50%,
+  '11': 55%,
+  '12': 60%,
+  '13': 65%,
+  '14': 70%,
+  '15': 75%,
+  '16': 80%,
+  '17': 85%,
+  '18': 90%,
+  '19': 95%,
+  '20': 100%
 );
 
 // 圓弧, 使用 (rwd尺寸-)round-key值
 $rounds: (
-  'none':none,
+  'none': none,
   's': 2px,
   'm': 4px,
   'l': 8px,
@@ -83,34 +109,34 @@ $rounds: (
 );
 
 // border樣式, 使用 (rwd尺寸-)border-key值
-$border-styles:(
-  'solid':solid,
-  'dashed':dashed,
-  'dotted':dotted,
-  'double':double,
-  'none':none
+$border-styles: (
+  'solid': solid,
+  'dashed': dashed,
+  'dotted': dotted,
+  'double': double,
+  'none': none
 );
 
 // border寬, 使用 (rwd尺寸-)border-key值
-$border-width:(
-  '0':0,
-  's':1px,
-  'm':2px,
-  'l':4px
+$border-width: (
+  '0': 0,
+  's': 1px,
+  'm': 2px,
+  'l': 4px
 );
 
 // 屬標狀態, 使用 (rwd尺寸-)cursor-key值
-$cursors:(
-  'default':default,
-  'pointer':pointer,
-  'wait':wait,
-  'text':text,
-  'move':move,
-  'not-allowed':not-allowed
+$cursors: (
+  'default': default,
+  'pointer': pointer,
+  'wait': wait,
+  'text': text,
+  'move': move,
+  'not-allowed': not-allowed
 );
 
 // 透明度, 使用 (rwd尺寸-)opacity-key值
-$opacitys:(
+$opacitys: (
   '0': 0,
   '25': 25,
   '50': 50,

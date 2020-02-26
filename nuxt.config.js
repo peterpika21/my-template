@@ -68,6 +68,10 @@ module.exports = {
     {
       src: '~/plugins/axios.js',
       ssr: false
+    },
+    {
+      src: '~/plugins/svg-icon.js',
+      ssr: false
     }
   ],
 
@@ -79,6 +83,19 @@ module.exports = {
      ** 您可以在这里扩展webpack配置
      */
     extend(config, ctx) {
+      // 排除 nuxt 原配置的影響,Nuxt 默認有vue-loader,會處理svg,img等
+      // 找到匹配.svg的規則,然後將存放svg文件的目錄排除
+      const { resolve } = require('path')
+      const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))
+      svgRule.exclude = [resolve(__dirname, 'assets/icons/svg')]
+
+      // 添加loader规则
+      config.module.rules.push({
+        test: /\.svg$/,
+        include: [resolve(__dirname, 'assets/icons/svg')],
+        use: [{ loader: 'svg-sprite-loader', options: { symbolId: 'icon-[name]' } }]
+      })
+
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
