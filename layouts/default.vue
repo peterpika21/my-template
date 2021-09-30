@@ -1,6 +1,7 @@
-<template lang="pug">
-  div#app
-    nuxt
+<template>
+  <div id="app">
+    <nuxt />
+  </div>
 </template>
 
 <style lang="scss" scoped>
