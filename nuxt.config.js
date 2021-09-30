@@ -2,7 +2,6 @@ module.exports = {
   // 'universal': 同構架構(Isomorphic)，有SSR+CSR(包含 client-side navigation)
   // 'spa': 僅有 CSR (包含 client-side navigation)
   mode: 'spa',
-
   // head 配置
   head: {
     titleTemplate: '自我練習',
@@ -36,17 +35,14 @@ module.exports = {
       }
     ]
   },
-
   // 預設 loading 進度條
   loading: {
     color: '#51b9ca'
   },
-
   // 项目里要使用的 SCSS 文件
   css: ['@/assets/css/main.scss'],
-
   // Nuxt.js 擴展
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', 'nuxt-fontawesome'],
 
   // 客製化配置 nuxt 應用路由
   router: {
@@ -61,16 +57,29 @@ module.exports = {
       }
     ]
   },
-
   // 配置 vue 插件
   // 預設是 SSR + CSR 環境都起作用，若你只需要 Browser 端執行，把 ssr 註記關掉
   plugins: [
     {
       src: '~/plugins/axios.js',
       ssr: false
+    },
+    {
+      src: '~/plugins/font-awesome.js',
+      ssr: false
     }
   ],
-
+  fontawesome: {
+    // icon 的標籤使用 <fa>，這邊不設定就會依照 plugin 裡的設定<font-awesome-icon>
+    component: 'fa',
+    imports: [
+      // 引入 fas 所有的icon
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      }
+    ]
+  },
   // 專案建立時設定
   // this is necessary
   build: {

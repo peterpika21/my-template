@@ -1,5 +1,7 @@
 <template>
-  <div>123</div>
+  <div>
+    <fa :icon="['fas', 'file-image']" />
+  </div>
 </template>
 
 <script>
